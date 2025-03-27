@@ -1,0 +1,113 @@
+.card-container {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    margin: 20px;
+    cursor: pointer;
+    pointer-events: auto; /* Ensure the container responds to clicks */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when facing front */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.card-front {
+    transform: rotateY(0deg); /* Default view */
+}
+
+.card-back {
+    transform: rotateY(180deg); /* Hidden initially */
+    background-color: #2c2c2c;
+}
+
+/* Flip on hover */
+.card-container:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Card image */
+.card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+    padding: 1px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.card-text-front {
+    font-size: 14px;
+    color: #797979;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.card-text-back {
+    font-size: 20px;
+    color: #797979;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+/* Flip when the flipped class is applied */
+.card-container.flipped .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Responsive behavior for cards */
+@media (max-width: 1200px) {
+    .row {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        grid-template-columns: repeat(1, 1fr); /* Single card per row on small screens */
+    }
+}

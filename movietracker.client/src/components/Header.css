@@ -1,0 +1,61 @@
+.fixed-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    /*    background-color: rgba(31,148,0,0.5);*/
+    background-color: rgba(0, 51, 25, 0.9);
+
+    color: white;
+    height: 55px;
+    margin-right: 20px;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    margin: 0;
+}
+
+.btn {
+    margin-right: 30px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 0; /* Start with zero width */
+    opacity: 0; /* Start invisible */
+    transition: width 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+    .search-bar.visible {
+        width: 200px; /* Final width of the search bar */
+        opacity: 1; /* Fully visible */
+    }
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.header-actions img {
+    display: inline-block;
+    margin-right: 10px;
+}
