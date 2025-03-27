@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "hOTFnVXhAi+DhNG53Xqahlq0F1Ka2jxkiJ4Eppa2Lc4=",
+  "Source": "MovieTracker.Server",
+  "BasePath": "_content/MovieTracker.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\a\\Movies-DotNet\\Movies-DotNet\\movietracker.client\\movietracker.client.esproj",
+      "Version": 2,
+      "Source": "movietracker.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
